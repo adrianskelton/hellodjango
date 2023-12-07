@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-cdl)&9a8=julopq0pjr4*n@kxxp(=$th9y=ywrmpy5fh*@sr+*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '8000-adrianskelt-hellodjango-wkvkxa0e1r9.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['0.0.0.0', '8000-adrianskelt-hellodjango-wkvkxa0e1r9.ws-eu106.gitpod.io', 'ckz8780-django-todo-app22-bdddfe4cb383.herokuapp.com']
 
 
 # Application definition
