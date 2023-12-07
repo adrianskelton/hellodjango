@@ -31,8 +31,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-cdl)&9a8=julopq0pjr4*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ['0.0.0.0', '8000-adrianskelt-hellodjango-wkvkxa0e1r9.ws-eu106.gitpod.io', 'ckz8780-django-todo-app22-bdddfe4cb383.herokuapp.com', '8000-adrianskelt-hellodjango-wkvkxa0e1r9.ws-eu106.gitpod.io']
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+if development:
+    ALLOWED_HOSTS = ['0.0.0.0', '8000-adrianskelt-hellodjango-wkvkxa0e1r9.ws-eu106.gitpod.io', 'ckz8780-django-todo-app22-bdddfe4cb383.herokuapp.com', '8000-adrianskelt-hellodjango-wkvkxa0e1r9.ws-eu106.gitpod.io']
+else:
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 # Application definition
 
@@ -87,6 +89,7 @@ if development:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
